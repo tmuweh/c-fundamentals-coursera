@@ -1,5 +1,7 @@
 /*
   Print sine and cosine table between 0 and 1
+  Tangue Muweh
+  V 1.0
 
 */
 
