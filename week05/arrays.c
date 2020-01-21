@@ -12,7 +12,7 @@
 #endif
 
 int main(void) {
-    int num[SIZE];
+    int num[100] = {1}; //initialize all arrays with one
     
   return 0;
 }
