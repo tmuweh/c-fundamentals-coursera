@@ -11,15 +11,18 @@
 int main(void) {
     int num[10];
     int i;
-    double sum = 0.0;
-
+    int sum = 0.0;
+    int product = 1; //prevent default zero
     for (i = 0; i < 10; i++) {
 
        num[i] = 1; //initialize all arrays with one
     }
     for (i = 0; i < 10; i++) {
 
-       printf("%d\n",num[i]); //initialize all arrays with one
+      sum = sum + num[i];
+      product = product * num[i];
     }
+    printf("Sum: %d\n", sum);
+    printf("Product: %d\n", product);
   return 0;
 }
