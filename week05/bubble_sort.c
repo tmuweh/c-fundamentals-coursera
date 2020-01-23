@@ -15,7 +15,7 @@ void swap( int *a, int *b);
 int main(void)
 {
 
-	int grades[SIZE] ={20, 13, 45, 6, 34, 19, 68, 90, 23, 7};
+	int grades[SIZE] ={20, 13, 45, 6, 34, 19, 68, 90, 3, 7};
 
 	//before sort
 	printf("Before Sort:\n");
@@ -28,7 +28,7 @@ int main(void)
 	
 	for(int i = 0; i < SIZE; i ++){
 		counter = 0; // re-initialize counter to 0 before next iteration
-		for(int j = SIZE - 1; j > 0; j--)
+		for(int j = SIZE - 1; j > i; j--)
 			if(grades[j-1] > grades[j]){
 				counter++;
 				swap(&grades[j-1], &grades[j]);
