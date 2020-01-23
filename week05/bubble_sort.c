@@ -23,10 +23,22 @@ int main(void)
 		printf("%d\t",  grades[i]);
 	}
 	printf("\n");
-	for(int i = 0; i < SIZE; i ++)
+
+	int counter; // counts number of swaps in the inner loop(j) per iteration of i lopp
+	
+	for(int i = 0; i < SIZE; i ++){
+		counter = 0; // re-initialize counter to 0 before next iteration
 		for(int j = SIZE - 1; j > 0; j--)
-			if(grades[j-1] > grades[j])
+			if(grades[j-1] > grades[j]){
+				counter++;
 				swap(&grades[j-1], &grades[j]);
+			}
+		printf("Counter:%d after iteration: %d\n", counter, i );
+		if(counter == 0){
+			printf("Already sorted\n");
+			break;
+		}
+	}
 
 	//after sort
 	printf("After Sort:\n");
