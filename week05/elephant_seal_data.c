@@ -30,7 +30,7 @@ int main(void){
 	printf("number of elephant_raw_data: %d\n", counter - 1);
 	for(int i = 0; i < counter-1; i++)
 		//calculate average weight of elephants
-		average_weight += (elephant_raw_data[i] - average_weight)/(i + 1);
+		average_weight += (elephant_raw_data[i] - average_weight)/(i + 1); //i + 1 because indexing starts from zero
 	printf("average_elephant_seal_weight: %d\n", average_weight );
 	fclose(fp);
 
